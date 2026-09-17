@@ -182,14 +182,14 @@
   @media(max-width:620px){.inc-list{grid-template-columns:1fr}}
   .inc-item{
     padding:28px 24px 26px;border:1.5px solid var(--mist);border-radius:14px;background:#fff;
-    display:flex;flex-direction:column;align-items:flex-start;text-align:left;
+    display:grid;grid-template-columns:auto 1fr;gap:0 16px;align-items:start;text-align:left;
   }
   .inc-icon{
-    width:56px;height:56px;border-radius:50%;margin-bottom:18px;flex:0 0 auto;
+    width:52px;height:52px;border-radius:50%;flex:0 0 auto;
     display:flex;align-items:center;justify-content:center;
     background:color-mix(in srgb, var(--honey) 30%, var(--paper));color:var(--cherry);
   }
-  .inc-icon svg{width:27px;height:27px}
+  .inc-icon svg{width:25px;height:25px}
 
   /* included, dark treatment */
   .inc-banner{
@@ -266,16 +266,16 @@
   .logo-row{display:flex;align-items:center;gap:48px;flex-wrap:wrap}
   .logo-row img{width:auto;object-fit:contain}
   .logo-plate{
-    height:86px;border-radius:10px;background:#fff;
-    padding:0 31px;display:flex;align-items:center;
+    height:76px;border-radius:10px;background:#fff;
+    padding:0 26px;display:flex;align-items:center;
   }
-  .logo-plate img{height:24px}
-  .logo-badge{height:86px;border-radius:10px}
+  .logo-plate img{height:17px}
+  .logo-badge{height:76px;border-radius:10px}
   @media(max-width:620px){
-    .logo-row{gap:24px}
-    .logo-plate{height:66px;padding:0 24px}
-    .logo-plate img{height:18px}
-    .logo-badge{height:66px}
+    .logo-row{gap:22px}
+    .logo-plate{height:60px;padding:0 20px}
+    .logo-plate img{height:14px}
+    .logo-badge{height:60px}
   }
 
   .org-card{border:1.5px solid var(--forest);border-radius:14px;padding:28px 22px 26px;background:#fff;display:flex;flex-direction:column;gap:14px;align-items:center;text-align:center}
@@ -754,8 +754,8 @@
     <div class="wrap partner-logos">
       <p class="k">Sponsors</p>
       <div class="logo-row">
-        <div class="logo-plate"><img src="images/logo-auxilium-navy.png" alt="Auxilium Education" onerror="this.style.display='none'"></div>
         <img class="logo-badge" src="images/logo-summited.jpg" alt="SummitEd" onerror="this.style.display='none'">
+        <div class="logo-plate"><img src="images/logo-auxilium-navy.png" alt="Auxilium Education" onerror="this.style.display='none'"></div>
       </div>
     </div>
   </section>
