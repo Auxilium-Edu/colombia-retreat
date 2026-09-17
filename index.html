@@ -177,15 +177,25 @@
 
   /* included */
   .included{background:var(--paper-deep)}
-  .inc-list{margin-top:36px;display:grid;grid-template-columns:1fr 1fr;gap:0 56px;max-width:900px}
-  @media(max-width:720px){.inc-list{grid-template-columns:1fr}}
+  .inc-list{margin-top:38px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1040px}
+  @media(max-width:900px){.inc-list{grid-template-columns:1fr 1fr}}
+  @media(max-width:620px){.inc-list{grid-template-columns:1fr}}
   .inc-item{
-    display:grid;grid-template-columns:24px 1fr;gap:0 14px;align-items:start;
-    padding:16px 0;border-bottom:1px solid var(--mist);
+    padding:26px 24px 24px;border:1.5px solid var(--mist);border-radius:14px;background:#fff;
+    display:flex;flex-direction:column;align-items:center;text-align:center;
   }
-  .inc-item .tick{width:22px;height:22px;color:var(--cherry);margin-top:2px}
-  .inc-item b{display:block;font-size:1rem}
-  .inc-item span{display:block;margin-top:3px;font-size:.92rem;color:color-mix(in srgb, var(--forest) 80%, var(--paper))}
+  .inc-icon{
+    width:52px;height:52px;border-radius:50%;margin-bottom:16px;flex:0 0 auto;
+    display:flex;align-items:center;justify-content:center;
+    background:color-mix(in srgb, var(--honey) 26%, #fff);color:var(--cherry);
+  }
+  .inc-icon svg{width:26px;height:26px}
+  .inc-photo{
+    width:100%;height:140px;object-fit:cover;border-radius:10px;margin-bottom:16px;
+    background:var(--paper-deep);
+  }
+  .inc-item b{display:block;font-size:1.05rem}
+  .inc-item span{display:block;margin-top:6px;font-size:.92rem;color:color-mix(in srgb, var(--forest) 80%, var(--paper))}
 
   /* who it's for */
   .who-card{border:1.5px solid var(--forest);border-radius:14px;padding:30px 28px;background:#fff}
@@ -241,6 +251,23 @@
   .sponsor .inner{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;padding-top:44px;padding-bottom:44px}
   .sponsor h2{margin-bottom:8px;font-size:clamp(1.5rem,3vw,2rem)}
   .sponsor p{max-width:56ch;font-size:1rem}
+
+  .partner-logos{padding-top:34px;padding-bottom:40px;border-top:1px solid var(--mist)}
+  .partner-logos p.k{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--honey);margin-bottom:20px}
+  .logo-row{display:flex;align-items:center;gap:48px;flex-wrap:wrap}
+  .logo-row img{width:auto;object-fit:contain}
+  .logo-plate{
+    height:78px;border-radius:10px;background:#fff;
+    padding:0 22px;display:flex;align-items:center;
+  }
+  .logo-plate img{height:34px}
+  .logo-badge{height:78px;border-radius:10px}
+  @media(max-width:620px){
+    .logo-row{gap:28px}
+    .logo-plate{height:62px;padding:0 18px}
+    .logo-plate img{height:26px}
+    .logo-badge{height:62px}
+  }
 
   .org-card{border:1.5px solid var(--forest);border-radius:14px;padding:28px 22px 26px;background:#fff;display:flex;flex-direction:column;gap:14px;align-items:center;text-align:center}
   .org-card > div:not(.avatar){width:100%}
@@ -509,30 +536,37 @@
       <h2>Whichever room you choose, all of this is included</h2>
       <div class="inc-list">
         <div class="inc-item">
-          <svg class="tick" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M4 12 l5 5 L18 6"/></svg>
+          <div class="inc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17V8a1 1 0 0 1 1-1h10v10"/><path d="M13 10h4l3 3.5V17"/><path d="M2 17h1.6"/><path d="M9.4 17h5.2"/><path d="M18.4 17H20"/><circle cx="6.5" cy="17.5" r="1.9"/><circle cx="16.5" cy="17.5" r="1.9"/></svg></div>
+          <img class="inc-photo" src="images/inc-transport.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+          <div><b>Transportation to and from the venue</b><span>Round-trip ground transfer between Bogotá and the farm</span></div>
+        </div>
+        <div class="inc-item">
+          <div class="inc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 19v-7h18v7"/><path d="M3 19v2"/><path d="M21 19v2"/><path d="M3 12V5"/><path d="M7 12V9h5a2 2 0 0 1 2 2v1"/></svg></div>
+          <img class="inc-photo" src="images/room-shared-1.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
           <div><b>Three nights of lodging</b><span>In your room on the farm</span></div>
         </div>
         <div class="inc-item">
-          <svg class="tick" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M4 12 l5 5 L18 6"/></svg>
+          <div class="inc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h12v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M16 9h2a2.5 2.5 0 0 1 0 5h-2"/><path d="M4 21h14"/><path d="M8 5V3"/><path d="M12 5V3"/></svg></div>
+          <img class="inc-photo" src="images/inc-meals.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
           <div><b>All meals and coffee</b><span>Including some of the best coffee you will ever drink</span></div>
         </div>
         <div class="inc-item">
-          <svg class="tick" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M4 12 l5 5 L18 6"/></svg>
-          <div><b>The full program</b><span>Every session, workshop, and roundtable across both days</span></div>
+          <div class="inc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18v11H9l-5 4v-4H3z"/><path d="M8 9h8"/><path d="M8 12.5h5"/></svg></div>
+          <img class="inc-photo" src="images/inc-program.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+          <div><b>The full program</b><span>Every session, workshop, and roundtable across both days with a small group of new and veteran IECs, capped at 25</span></div>
         </div>
         <div class="inc-item">
-          <svg class="tick" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M4 12 l5 5 L18 6"/></svg>
-          <div><b>All excursions</b><span>Coffee tasting, fruit tour, Latin dancing, bird watching, the bee sanctuary, guided hikes, biking, and yoga</span></div>
+          <div class="inc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 19l6.5-9.5L13 16l2.5-3.5L22 19z"/><circle cx="17.5" cy="6" r="2.2"/></svg></div>
+          <img class="inc-photo" src="images/excursion-coffee.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+          <div><b>Full group activities</b><span>The coffee tasting and Latin dancing lesson, included for everyone</span></div>
         </div>
         <div class="inc-item">
-          <svg class="tick" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M4 12 l5 5 L18 6"/></svg>
-          <div><b>A small, mixed group</b><span>New and veteran IECs, capped at 25 participants</span></div>
-        </div>
-        <div class="inc-item">
-          <svg class="tick" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M4 12 l5 5 L18 6"/></svg>
-          <div><b>Optional Bogotá add-on</b><span>We can help arrange city sightseeing before or after</span></div>
+          <div class="inc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.6 8.4l-2 5.2-5.2 2 2-5.2z"/></svg></div>
+          <img class="inc-photo" src="images/excursion-hiking.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+          <div><b>One additional activity</b><span>Your pick of the exotic fruit tour, a guided hike, mountain biking, bird watching, the bee sanctuary, or hatha yoga</span></div>
         </div>
       </div>
+
       <p class="sched-note">Not included: flights to Bogotá and travel insurance. We will send full travel guidance to everyone who joins.</p>
     </div>
   </section>
@@ -562,8 +596,8 @@
           <div class="room-body">
             <p class="room-tag">Two to a room</p>
             <h3>Shared room</h3>
-            <p class="price"><s>$1,799</s> $1,599 <span>per person</span></p>
-            <p class="early-note">Early Bird through October 15</p>
+            <p class="price"><s>$1,499</s> $1,299 <span>per person</span></p>
+            <p class="early-note">Early Bird through November 15</p>
             <p>Your own bed in a room shared with one fellow attendee. Tell us in your registration form if there's someone you'd like to room with; otherwise we'll pair you thoughtfully.</p>
           </div>
         </div>
@@ -586,8 +620,8 @@
           <div class="room-body">
             <p class="room-tag">One to a room</p>
             <h3>Private room</h3>
-            <p class="price"><s>$2,499</s> $2,299 <span>per person</span></p>
-            <p class="early-note">Early Bird through October 15</p>
+            <p class="price"><s>$2,199</s> $1,999 <span>per person</span></p>
+            <p class="early-note">Early Bird through November 15</p>
             <p>A room entirely to yourself, for those who recharge best with their own space at the end of full days. Limited capacity, first-come first-serve. May also be shared with a partner or other guest, if desired.</p>
           </div>
         </div>
@@ -693,7 +727,7 @@
     <div class="wrap">
       <p class="sec-eyebrow">Join us</p>
       <h2>Register for Common Ground Colombia</h2>
-      <p class="lede">Spots are limited by the size of the farm, and we are curating the room so the mix works for everyone. Registering takes two minutes; choose a shared room ($1,599 Early Bird) or a private room ($2,299 Early Bird) in the form.</p>
+      <p class="lede">Spots are limited by the size of the farm, and we are curating the room so the mix works for everyone. Registering takes two minutes; choose a shared room ($1,299 Early Bird) or a private room ($1,999 Early Bird) in the form.</p>
 
       <!-- EDIT: replace 1FAIpQLSd5waK4zstEvFRIQq-VwrlBy7MOvt_TBe3D5mVyXl1vBL3lQw in BOTH the iframe src and the fallback link below (see README for the 3-minute setup) -->
       <div class="gform">
@@ -712,6 +746,13 @@
         <p>If your organization serves IECs or admissions professionals and you'd like to put your name in front of this room, we'd love to talk about what a partnership could look like.</p>
       </div>
       <a class="btn btn-ghost" href="mailto:info@auxilium-edu.com?subject=Sponsoring%20the%20Common%20Ground%20Retreat">Get in touch</a>
+    </div>
+    <div class="wrap partner-logos">
+      <p class="k">Sponsors</p>
+      <div class="logo-row">
+        <div class="logo-plate"><img src="images/logo-auxilium-navy.png" alt="Auxilium Education" onerror="this.style.display='none'"></div>
+        <img class="logo-badge" src="images/logo-summited.jpg" alt="SummitEd" onerror="this.style.display='none'">
+      </div>
     </div>
   </section>
 
