@@ -182,7 +182,7 @@
   @media(max-width:620px){.inc-list{grid-template-columns:1fr}}
   .inc-item{
     padding:28px 24px 26px;border:1.5px solid var(--mist);border-radius:14px;background:#fff;
-    display:flex;flex-direction:column;align-items:center;text-align:center;
+    display:flex;flex-direction:column;align-items:flex-start;text-align:left;
   }
   .inc-icon{
     width:56px;height:56px;border-radius:50%;margin-bottom:18px;flex:0 0 auto;
@@ -193,7 +193,7 @@
 
   /* included, dark treatment */
   .inc-banner{
-    width:100%;height:320px;object-fit:cover;object-position:center 62%;
+    width:100%;height:320px;object-fit:cover;object-position:center 28%;
     border-radius:14px;margin-top:30px;display:block;background:var(--forest);
   }
   @media(max-width:620px){.inc-banner{height:210px}}
@@ -266,16 +266,16 @@
   .logo-row{display:flex;align-items:center;gap:48px;flex-wrap:wrap}
   .logo-row img{width:auto;object-fit:contain}
   .logo-plate{
-    height:78px;border-radius:10px;background:#fff;
-    padding:0 22px;display:flex;align-items:center;
+    height:86px;border-radius:10px;background:#fff;
+    padding:0 31px;display:flex;align-items:center;
   }
-  .logo-plate img{height:34px}
-  .logo-badge{height:78px;border-radius:10px}
+  .logo-plate img{height:24px}
+  .logo-badge{height:86px;border-radius:10px}
   @media(max-width:620px){
-    .logo-row{gap:28px}
-    .logo-plate{height:62px;padding:0 18px}
-    .logo-plate img{height:26px}
-    .logo-badge{height:62px}
+    .logo-row{gap:24px}
+    .logo-plate{height:66px;padding:0 24px}
+    .logo-plate img{height:18px}
+    .logo-badge{height:66px}
   }
 
   .org-card{border:1.5px solid var(--forest);border-radius:14px;padding:28px 22px 26px;background:#fff;display:flex;flex-direction:column;gap:14px;align-items:center;text-align:center}
